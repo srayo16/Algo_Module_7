@@ -61,13 +61,10 @@ int main()
 
     for (int i = 1; i <= n; i++)
     {
-        for (int v : arr[i])
+        if (!visited[i])
         {
-            if (!visited[i])
-            {
-                dfs(1);
-                cc++;
-            }
+            dfs(i);
+            cc++;
         }
     }
 
